@@ -1,14 +1,16 @@
 import { createContext, useContext, useState } from 'react';
-import boardData from '../board-data.js';
+import boardData from '../Board-data.js';
 
 const GameContext = createContext();
-console.log('board data', boardData);
 
 const GameProvider = ({ children }) => {
   const [board, setBoard] = useState(boardData);
+  const [currentPlayer, setCurrentPlayer] = useState('X');
+  const [gameMessage, setGameMessage] = useState(null);
+  const [active, setActive] = useState(true);
 
   return (
-    <GameContext.Provider value={{ board, setBoard }}>
+    <GameContext.Provider value={{ board, setBoard, currentPlayer, setCurrentPlayer, gameMessage, setGameMessage, active, setActive }}>
       {children}
     </GameContext.Provider>
   );
