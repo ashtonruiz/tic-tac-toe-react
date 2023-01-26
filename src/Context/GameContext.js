@@ -1,10 +1,12 @@
-import { createContext, useContext } from 'react';
-import { useState } from 'react';
-
+import { createContext, useContext, useState } from 'react';
+import boardData from '../board-data.js';
 
 const GameContext = createContext();
+console.log('board data', boardData);
+
 const GameProvider = ({ children }) => {
   const [board, setBoard] = useState(boardData);
+
   return (
     <GameContext.Provider value={{ board, setBoard }}>
       {children}
@@ -19,4 +21,4 @@ const useGameContext = () => {
 };
 
 
-export { GameProvider, GameContext, useGameContext };
+export { GameProvider, useGameContext };
