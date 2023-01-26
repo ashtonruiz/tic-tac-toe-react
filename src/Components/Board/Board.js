@@ -5,7 +5,7 @@ import './Board.css';
 
 export default function Board() {
   return (
-    <div>
+    <div className='board'>
       {boardData.map((data) => (
         <Box key={data.space}/>
       ))} 
