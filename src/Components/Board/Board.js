@@ -1,13 +1,14 @@
 import React from 'react';
 import Box from '../Box/Box.js';
-import boardData from '../../Board-data.js';
 import './Board.css';
+import { useGameContext } from '../../Context/GameContext.js';
 
 export default function Board() {
+  const { board } = useGameContext();
   return (
     <div className='board'>
-      {boardData.map((data) => (
-        <Box key={data.space}/>
+      {board.map((box) => (
+        <Box key={box.space} box={box}/>
       ))} 
     </div>
 

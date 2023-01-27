@@ -1,7 +1,7 @@
 export default [
   {
     space: 0,
-    content: '',
+    content: 'X',
   },
   {
     space: 1,

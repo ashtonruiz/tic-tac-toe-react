@@ -2,9 +2,9 @@ import React from 'react';
 import './Box.css';
 import { handleClick } from '../../Context/GameContext.js';
 
-export default function Box() {
+export default function Box({ box }) {
   return (
-    <div className='box' onClick={handleClick}>Box</div>
+    <div className='box' onClick={handleClick}>{box.content}</div>
   );
 }
 
