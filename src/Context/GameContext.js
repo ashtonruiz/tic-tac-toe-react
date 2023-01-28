@@ -26,14 +26,14 @@ const GameProvider = ({ children }) => {
   };
 
   const handleWin = () => {
-    if ((board[0].content === board[1].content) & (board[0].content !== '') & (board[2].content === board [0].content)) setActive(false);
-    if ((board[3].content === board[4].content) & (board[3].content !== '') & (board[5].content === board [3].content)) setActive(false);
-    if ((board[6].content === board[7].content) & (board[6].content !== '') & (board[8].content === board [6].content)) setActive(false);
-    if ((board[0].content === board[4].content) & (board[0].content !== '') & (board[8].content === board [0].content)) setActive(false);
-    if ((board[2].content === board[4].content) & (board[2].content !== '') & (board[6].content === board [2].content)) setActive(false);
-    if ((board[0].content === board[3].content) & (board[0].content !== '') & (board[6].content === board [0].content)) setActive(false);
-    if ((board[1].content === board[4].content) & (board[1].content !== '') & (board[7].content === board [1].content)) setActive(false);
-    if ((board[2].content === board[5].content) & (board[2].content !== '') & (board[8].content === board [2].content)) setActive(false);
+    if ((board[0].content === board[1].content) & (board[0].content !== '') & (board[2].content === board [0].content)) setActive(false) & alert(`Congratulations ${currentPlayer} won!`);
+    if ((board[3].content === board[4].content) & (board[3].content !== '') & (board[5].content === board [3].content)) setActive(false) & alert(`Congratulations ${currentPlayer} won!`);
+    if ((board[6].content === board[7].content) & (board[6].content !== '') & (board[8].content === board [6].content)) setActive(false) & alert(`Congratulations ${currentPlayer} won!`);
+    if ((board[0].content === board[4].content) & (board[0].content !== '') & (board[8].content === board [0].content)) setActive(false) & alert(`Congratulations ${currentPlayer} won!`);
+    if ((board[2].content === board[4].content) & (board[2].content !== '') & (board[6].content === board [2].content)) setActive(false) & alert(`Congratulations ${currentPlayer} won!`);
+    if ((board[0].content === board[3].content) & (board[0].content !== '') & (board[6].content === board [0].content)) setActive(false) & alert(`Congratulations ${currentPlayer} won!`);
+    if ((board[1].content === board[4].content) & (board[1].content !== '') & (board[7].content === board [1].content)) setActive(false) & alert(`Congratulations ${currentPlayer} won!`);
+    if ((board[2].content === board[5].content) & (board[2].content !== '') & (board[8].content === board [2].content)) setActive(false) & alert(`Congratulations ${currentPlayer} won!`);
   };
   
   const checkScratch = () => {
